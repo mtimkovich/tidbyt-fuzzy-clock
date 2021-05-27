@@ -1,4 +1,4 @@
-# Pixlet Fuzzy Clock
+# tidbyt-fuzzy-clock
 
 ![Preview](https://raw.githubusercontent.com/mtimkovich/fuzzy-clock-pixlet/main/fuzzy_clock.gif)
 
