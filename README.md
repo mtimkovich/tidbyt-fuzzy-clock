@@ -8,4 +8,4 @@ Display the time in a groovy, human-readable way.
 3. Go to [http://localhost:8080](http://localhost:8080)
   1. `?tz=US/Central` can be passed to set the timezone.
 
-![Preview](https://raw.githubusercontent.com/mtimkovich/fuzzy-clock-pixlet/main/fuzzy_clock.gif)
+![Preview](https://raw.githubusercontent.com/mtimkovich/tidbyt-fuzzy-clock/main/fuzzy_clock.gif)
