@@ -1,2 +1,1 @@
-# fuzzy-clock-pixlet
-Fuzzy Clock for Pixlet
+# Pixlet Fuzzy Clock
