@@ -2,22 +2,22 @@ load('render.star', 'render')
 load('time.star', 'time')
 
 words = {
-    1: 'one',
-    2: 'two',
-    3: 'three',
-    4: 'four',
-    5: 'five',
-    6: 'six',
-    7: 'seven',
-    8: 'eight',
-    9: 'nine',
-    10: 'ten',
-    11: 'eleven',
-    12: 'twelve',
-    15: 'quarter',
-    20: 'twenty',
-    25: 'twenty-five',
-    30: 'half',
+    1: 'ONE',
+    2: 'TWO',
+    3: 'THREE',
+    4: 'FOUR',
+    5: 'FIVE',
+    6: 'SIX',
+    7: 'SEVEN',
+    8: 'EIGHT',
+    9: 'NINE',
+    10: 'TEN',
+    11: 'ELEVEN',
+    12: 'TWELVE',
+    15: 'QUARTER',
+    20: 'TWENTY',
+    25: 'TWENTY-FIVE',
+    30: 'HALF',
 }
 
 def round(minutes):
@@ -37,23 +37,23 @@ def round(minutes):
     return rounded, up
 
 def fuzzy_time(hours, minutes):
-    glue = 'past'
+    glue = 'PAST'
     rounded, up = round(minutes)
 
     if up:
         hours += 1
-        glue = 'til'
+        glue = 'TIL'
 
     if hours > 12:
         hours -= 12
 
     if rounded == 0:
-        return [words[hours], "o'clock"]
+        return [words[hours], "O'CLOCK"]
     else:
         return [words[rounded], glue, words[hours]]
 
 def main(config):
-    timezone = config.get("timezone") or 'UTC'
+    timezone = config.get("tz") or 'UTC'
     now = time.now().in_location(timezone)
 
     fuzzed = fuzzy_time(now.hour(), now.minute())
