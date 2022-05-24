@@ -56,7 +56,7 @@ def main(config):
     timezone = config.get("tz") or 'UTC'
     now = time.now().in_location(timezone)
 
-    fuzzed = fuzzy_time(now.hour(), now.minute())
+    fuzzed = fuzzy_time(now.hour, now.minute)
     # Add some left padding for ~style~.
     texts = [render.Text(' ' * i + s) for i, s in enumerate(fuzzed)]
 
